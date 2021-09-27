@@ -17,8 +17,21 @@ h2 {
     justify-content: center;
     margin-right: 2%;
 }
+#feil {
+    font-size: 2rem;
+    font-weight:lighter;
+    color: red;
+    font-weight: bold;
+}
+#riktig {
+    font-size: 2rem;
+    font-weight:lighter;
+    color:green
+    ;
+    font-weight: bold;
+}
 
-#btn {
+#btn , #btn1 {
     background-color: aquamarine;
    background: transparent;
    text-decoration: none;
@@ -36,3 +49,7 @@ h2 {
 #btn:hover {
     background: rgb(231, 248, 74);
 }
+#btn1:hover {
+    background: rgb(14, 211, 178);
+}
+
