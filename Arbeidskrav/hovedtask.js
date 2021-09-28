@@ -54,7 +54,7 @@ function checkLoser(){
        img4.remove();
     }
     else if(antall_Feil == 5){
-    win.innerHTML = `<img src = "/images/cat.jpg">`;  
+    win.innerHTML = `<img src = "/images/cat.png">`;  
     bildeLiv.remove();
     feil_poeng.remove();
     riktig_poeng.remove();
