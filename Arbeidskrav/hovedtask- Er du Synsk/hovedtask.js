@@ -80,7 +80,7 @@ function checkLoser(){
 
                       // QUESTIONS 
 
-// Right now I am struggeling to add back lives as imgs so when 3 
+// Right now I am struggling to add back lives as imgs so when 3 
 // could I use for loop here instead?
 //  add images based on user input
 
