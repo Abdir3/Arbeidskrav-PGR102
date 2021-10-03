@@ -12,10 +12,9 @@ let img2 = document.getElementById('2');
 let img3 = document.getElementById('3');
 let img4 = document.getElementById('4');
 let img5 = document.getElementById('5');
-
-
+ let input = prompt('Hvor mange liv vil du ha?');
 // kontroll variabeler for funksjonene 
-let liv_Igjen = 5;
+let liv_Igjen = input;
 let  antall_Poeng = 0;
 let antall_Feil = 0;
 
@@ -39,6 +38,7 @@ function checker () {
 // Event knapper som kjører hovedfunksjonen
 button.onclick = checker;  
 button1.onclick = checker;
+
 // funksjon som sjekker vinner  og avslutter hvis spilleren har vunnet ved å gjette riktig 10 ganger
 function checkWinner () {
     if (antall_Poeng == 10) {
@@ -52,6 +52,7 @@ function checkWinner () {
       win.innerHTML = `<img src = "/images/fireworks.jpg">`; 
     } 
 }
+
 // Funksjon som fjerner liv visuelt og avslutter spillet når spilleren har gjettet feil 5 ganger
 function checkLoser(){
     if(antall_Feil == 1) {
@@ -64,7 +65,7 @@ function checkLoser(){
     } else if (antall_Feil ==4) {
        img4.remove();
     }
-    else if(antall_Feil == 5){
+    else if(antall_Feil == input){
     win.innerHTML = `<img src = "/images/cat.png">`;  
     bildeLiv.remove();
     feil_poeng.remove();
@@ -77,8 +78,11 @@ function checkLoser(){
 }
 
 
+                      // QUESTIONS 
 
-
+// Right now I am struggeling to add back lives as imgs so when 3 
+// could I use for loop here instead?
+//  add images based on user input
 
 
 
