@@ -18,7 +18,7 @@ let antall_Feil = 0;
 button.onclick = checker;  
 button1.onclick = checker;
 
-//Lager et objekt for tallene 3,5 og 7 og setter disse til true 
+//Lager et objekt for tallene 3,5 og 7 og setter disse til true, slik at jeg kan bruke dem senere
 let liv = 
     {
         3: true,
@@ -51,8 +51,8 @@ function checker () {
 
     if(antall_Poeng === 3 || antall_Poeng === 5 || antall_Poeng === 7 ){
          /* Hvis tallet er 3,5 eller 7 vil den sjekke objektet "antall liv" og hvis den er true legger den til 
-          et bilde og setter den verdien til false. Dette fordi  hvis du har 3 riktig og den har lagt til et bilde,
-           og du gjetter feil er verdien forsatt 3, i denne scenarion vil den lagt til et bilde men siden vi 
+          et bilde og setter den verdien til false. Dette fordi  hvis du har 3 riktig,
+           og du gjetter feil er verdien forsatt 3 riktige, i denne scenarion vil den lagt til et bilde men siden vi 
            gjorde 3 til false vil den ikke legge til et bilde hvis du skulle gjette feil når du har enten 3, 5 eller 7 poeng. */ 
         if(liv[antall_Poeng])  {
             bildeLiv.innerHTML += `<img class = 'life' src="/images/person3.png" alt="">`
@@ -88,16 +88,6 @@ function checkLoser () {
         win.innerHTML =`<img src = "/images/cat.png">`;  
 }
 }
-
-// Funksjon som fjerner liv visuelt og avslutter spillet når spilleren har gjettet feil 5 ganger
-
-
-
-                      // QUESTIONS 
-
-// Right now I am struggling to add back lives as imgs so when 3 
-// could I use for loop here instead?
-//  add images based on user input
 
 
 
