@@ -1,24 +1,39 @@
+// Getting elements from html
 const btn = document.getElementById('btn');
 let antallBilder = document.getElementById('antall-bilder');
 const container = document.getElementById('div');
 
+// initierer random til 0 
+let random = 0;
+
+// on-click kjører hovedfunksjonen
+btn.onclick = pictureGenerator;
 
 function pictureGenerator () {
- let random = Math.floor(Math.random()*100+1)
- antallBilder.innerHTML = ` Antall Bilder: ${random+1}`; 
-for(i = 0; i <=random; i++) {
-  container.innerHTML += `<img src = "/images/person1.jpg">`
-   
+  // hennter alle bildene for loopene har laget og gjør om fra html collection--> array
+  let images = Array.from(document.getElementsByClassName('image'));
+  
+// hvis lengden på array er 0 altså ingen bilder så legg til
+  if(!images.length){
+    random = Math.floor(Math.random()*100+1)
+    antallBilder.innerHTML = `Antall Bilder: ${random+1}`; 
+   for(i = 0; i <random; i++) {
+     container.innerHTML += `<img class= "image"  src = "/images/person1.jpg">`
+   }
+   // ellers fjern alle bildene ved å loope over arrayen og fjerne alle bildene
+  }else{
+    for(i=0;i <random;i++ ){
+      images[i].remove()
+      
+    } 
+    antallBilder.innerHTML = `Antall Bilder: 0`; 
+  }
+
+
+
 }
-}
-
-// How do I clear the screen without using the remove function? 
-// How do I acess the JS generated imgs from a for loop
 
 
 
- 
 
-
-btn.onclick = pictureGenerator;
 
