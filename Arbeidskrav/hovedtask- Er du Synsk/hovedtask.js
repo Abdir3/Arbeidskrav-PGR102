@@ -19,13 +19,13 @@ button.onclick = checker;
 button1.onclick = checker;
 
 //Lager et objekt for tallene 3,5 og 7 og setter disse til true, slik at jeg kan bruke dem senere
-/*let liv = 
+ let liv = 
     {
         3: true,
         5: true,
         7: true
     }
- */
+ 
 
 // Lager en for-loop som lager antall liv  visuelt dynamisk basert på bruker-input
 for(let i = 0; i < input; i++){
@@ -40,11 +40,6 @@ function checker () {
         antall_Poeng ++; 
         riktig_poeng.innerHTML = `Antall Poeng: ${antall_Poeng}`;
         checkWinner ();
-    }
-        if(antall_Poeng === 3 || antall_Poeng === 5 || antall_Poeng === 7 ){
-            bildeLiv.innerHTML += `<img class = 'life' src="/images/person3.png" alt="">`
-            liv_Igjen++   
-            checkWinner ();
     } else {
         antall_Feil ++;
         liv_Igjen --; 
@@ -53,15 +48,15 @@ function checker () {
         document.getElementsByClassName('life')[0].remove()  
         checkLoser()
     }
-
-    /*if(antall_Poeng === 3 || antall_Poeng === 5 || antall_Poeng === 7 ){
+   // kondisjon som kun legger til et poeng  hvis bruker når 3, 5 eller 7 kun engang(prøvde å neste  denne if'en  i tidligere kondisjon uten sukess)
+    if(antall_Poeng === 3 || antall_Poeng === 5 || antall_Poeng === 7 ){
         
         if(liv[antall_Poeng])  {
             bildeLiv.innerHTML += `<img class = 'life' src="/images/person3.png" alt="">`
         liv[antall_Poeng] = false
         liv_Igjen++
         }
-    }*/ 
+    } 
 }   
 
 
